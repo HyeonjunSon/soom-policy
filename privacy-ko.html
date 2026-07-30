@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soom 개인정보처리방침</title>
+<style>
+body{max-width:720px;margin:0 auto;padding:32px 20px 80px;font-family:'Apple SD Gothic Neo','Pretendard',-apple-system,sans-serif;line-height:1.75;color:#222;background:#fff}
+h1{font-size:26px;letter-spacing:-0.5px}h2{font-size:19px;margin-top:36px;letter-spacing:-0.3px}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #ddd;padding:8px 10px;text-align:left}
+th{background:#f7f5fb}code{background:#f4f2f8;padding:1px 5px;border-radius:4px;font-size:0.9em}
+li{margin:4px 0}strong{color:#000}
+@media(prefers-color-scheme:dark){body{background:#17121f;color:#ddd}strong{color:#fff}th{background:#241b33}td,th{border-color:#3a3348}code{background:#241b33}}
+</style></head><body><h1>Soom 개인정보처리방침</h1>
+<blockquote>
+<p><strong>초안(v1.0, 2026-07-23)</strong> — 출시 전 법률 검토가 필요합니다. 본 문서는 실제 구현과
+일치하도록 작성되었으며, 구현이 바뀌면 반드시 함께 갱신해야 합니다.</p>
+</blockquote>
+<p>Soom(이하 &quot;앱&quot;)은 익명 비밀 교환 서비스입니다. 우리는 당신이 누구인지 모르는 것을
+서비스의 핵심 가치로 삼으며, 이 방침은 그 약속을 구체적으로 설명합니다.</p>
+<h2>1. 수집하는 정보</h2>
+<p><strong>계정:</strong> 로그인은 Apple 계정 또는 이메일(전화번호는 준비 중)로 합니다. 이때 수집되는 것은
+<strong>로그인 식별자뿐</strong>이며, Apple 로그인 시 &quot;이메일 가리기&quot;를 선택하면 실제 주소 대신 Apple이
+발급한 릴레이 주소만 저장됩니다. 이름, 생년월일, 위치, 연락처, 사진은 요구하지도, 수집하지도
+않습니다. 광고 SDK와 행태 추적 도구를 사용하지 않습니다.</p>
+<p><strong>중요한 약속:</strong> 로그인 정보는 계정 유지(별명·열쇠·비밀 보관)에만 쓰입니다.
+<strong>다른 사용자에게 보이는 것은 당신이 직접 정한 별명 하나뿐입니다</strong> — 비밀, 댓글,
+1:1 대화는 서로에게 완전히 익명으로 전달됩니다.</p>
+<p>앱 이용 과정에서 생성·저장되는 정보:</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+<th>목적</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>계정 식별자</td>
+<td>이메일 주소(또는 Apple 릴레이 주소) + 내부 ID(UUID)</td>
+<td>로그인, 잔액·기록 유지</td>
+</tr>
+<tr>
+<td>별명</td>
+<td>직접 짓거나 뽑은 익명 별명, 오브 색</td>
+<td>다른 사용자에게 보이는 유일한 표시</td>
+</tr>
+<tr>
+<td>작성한 비밀</td>
+<td>카테고리, 첫 문장, 본문, 머무는 시간, 작성 시각</td>
+<td>교환 서비스 제공</td>
+</tr>
+<tr>
+<td>댓글</td>
+<td>열어본 비밀에 남긴 자유 텍스트(최대 200자), 작성 시각</td>
+<td>연 사람들의 방</td>
+</tr>
+<tr>
+<td>1:1 메시지</td>
+<td>비밀의 작성자와 주고받은 메시지(최대 400자), 읽음 시각</td>
+<td>익명 1:1 대화 제공</td>
+</tr>
+<tr>
+<td>공감(하트)</td>
+<td>어떤 비밀에 공감을 남겼는지</td>
+<td>공감 표시, 영구 보관 판정</td>
+</tr>
+<tr>
+<td>열람 기록</td>
+<td>어떤 비밀을 열쇠로 열었는지</td>
+<td>재열람 무료 처리, 방 접근 권한</td>
+</tr>
+<tr>
+<td>열쇠 원장</td>
+<td>열쇠 획득·사용 내역(가입·구매·열람·출석·초대·공유 인증)</td>
+<td>잔액 관리, 부정 사용 방지</td>
+</tr>
+<tr>
+<td>결제 기록</td>
+<td>열쇠 구매 내역(상품 ID, App Store 거래 식별자)</td>
+<td>결제 확인·복원, 부정 방지</td>
+</tr>
+<tr>
+<td>초대 기록</td>
+<td>내 초대 코드, 누가 내 코드로 가입했는지</td>
+<td>초대 보상 지급</td>
+</tr>
+<tr>
+<td>공유 인증 기록</td>
+<td>어떤 SNS에 인증했는지, 업로드한 캡처 이미지, 다음 인증 가능 시각</td>
+<td>보상 지급, 부정 검토, 쿨다운</td>
+</tr>
+<tr>
+<td>신고·차단 기록</td>
+<td>신고 대상, 차단한 상대</td>
+<td>안전 운영</td>
+</tr>
+<tr>
+<td>알림</td>
+<td>열림·답장·공감·만료 알림 내역</td>
+<td>알림 표시</td>
+</tr>
+<tr>
+<td>연령 확인 시각</td>
+<td>만 17세 이상 자기확인 시각</td>
+<td>이용 등급 준수</td>
+</tr>
+</tbody></table>
+<p>세션 토큰은 기기의 보안 저장소(iOS Keychain / Android Keystore)에만 보관됩니다.</p>
+<h2>2. AI 안전 필터와 제3자 제공</h2>
+<p><strong>모든 비밀·댓글·1:1 메시지는 게시/전송 전에 자동 안전 필터를 통과합니다</strong>(결제 여부와
+무관하게 예외 없이 유지됩니다). 필터는 3단계로 동작하며, 이 과정에서 <strong>텍스트가 아래 외부
+처리자에게 전송될 수 있습니다:</strong></p>
+<table>
+<thead>
+<tr>
+<th>수탁자</th>
+<th>전송 내용</th>
+<th>목적</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supabase Inc.</td>
+<td>위 표의 모든 저장 데이터</td>
+<td>데이터베이스·서버 호스팅</td>
+</tr>
+<tr>
+<td>OpenAI (Moderation API)</td>
+<td>게시 시도된 텍스트 본문만</td>
+<td>유해성 점수화(성적·혐오·자해·위협)</td>
+</tr>
+<tr>
+<td>Anthropic (Claude)</td>
+<td>판단이 애매한 일부 텍스트 본문만</td>
+<td>맥락 기반 최종 분류</td>
+</tr>
+<tr>
+<td>Apple (App Store)</td>
+<td>열쇠 구매 시 결제·영수증 정보</td>
+<td>결제 처리, 구매 복원</td>
+</tr>
+</tbody></table>
+<p><strong>필터로 전송되는 것은 익명 텍스트뿐입니다.</strong> 계정 식별자, 별명, 세션 토큰, 기기 정보는 함께
+전송하지 않습니다. OpenAI와 Anthropic 모두 API로 전송된 데이터를 자사 모델 학습에
+사용하지 않는다고 정책상 명시하고 있습니다(각사 데이터 사용 정책 참조).</p>
+<p><strong>결제:</strong> 열쇠 구매는 <strong>Apple App Store를 통해서만</strong> 처리됩니다. 카드 번호 등 결제 수단
+정보는 우리에게 전달되지 않으며, 우리는 구매 확인·복원에 필요한 상품 식별자와 영수증만
+저장합니다.</p>
+<h2>3. 보관과 삭제</h2>
+<ul>
+<li><strong>비밀은 스스로 사라집니다.</strong> 작성 시 고른 시간(24시간 · 3일 · 7일)이 지나면 본문과 첫
+문장, 사진, 그 비밀에 달린 <strong>모든 댓글이 즉시 파기</strong>됩니다. 대화방 안내를 위한 빈 껍데기
+기록만 남았다가, 이어진 대화가 없으면 7일 뒤 함께 삭제됩니다.
+공감이 100을 넘긴 비밀은 예외적으로 계속 보관되며(⭐), 이 경우에도 작성자는 언제든 직접
+지울 수 있습니다.</li>
+<li><strong>1:1 메시지는 비밀이 사라진 뒤에도 남습니다.</strong> 대화는 두 사람의 것이라 비밀의 수명과
+분리해 보관합니다. 상대를 차단하거나 계정을 삭제하면 함께 정리되며, 아래의 계정 삭제로
+언제든 전부 지울 수 있습니다.</li>
+<li><strong>신고된 콘텐츠는 예외적으로 사본이 보관됩니다.</strong> 신고가 접수되면 해당 비밀·댓글·대화의
+사본이 신고 처리, 이용자 보호, 법적 대응 목적을 위해 <strong>최대 1년</strong> 보관된 뒤 파기됩니다.
+이 사본은 원본이 사라진 뒤에도 신고 처리에만 쓰입니다.</li>
+<li><strong>앱 안에서 직접 전부 삭제할 수 있습니다</strong>: 내 공간 → 익명 보호 설정 → &quot;계정과 데이터 삭제&quot;.
+실행 즉시 계정과 함께 작성한 비밀, 댓글, 1:1 메시지, 공감, 열람 기록, 열쇠 원장, 결제 기록,
+공유 인증 기록, 신고·차단 기록이 <strong>모두 영구 삭제</strong>되며 복구할 수 없습니다.</li>
+<li>익명 구조상 우리는 특정인의 데이터를 신원으로 찾아드릴 수 없습니다. 삭제는 앱 내
+기능으로만 가능합니다.</li>
+</ul>
+<h2>4. 연령</h2>
+<p>Soom은 <strong>만 17세 이상</strong>만 이용할 수 있습니다. 시작 화면의 약속에 만 17세 이상 확인이
+포함되어 있으며, 만 17세 미만의 이용을 인지하는 경우 해당 데이터를 삭제합니다.</p>
+<h2>5. 자해·위기 대응</h2>
+<p>자해나 위기가 감지되는 글은 게시되지 않으며, 대신 <strong>지역에 맞는</strong> 상담 기관 정보를
+안내합니다. 이 안내는 의료적 조언이 아니며, 앱은 응급 서비스를 대체하지 않습니다.</p>
+<h2>6. 신고와 차단</h2>
+<p>비밀·대화는 앱 안에서 신고할 수 있고, 대화 상대는 차단할 수 있습니다. 차단하면 양쪽 모두
+서로의 비밀과 대화방을 다시 볼 수 없습니다.</p>
+<h2>7. 이용자의 권리</h2>
+<p>익명 서비스 특성상 열람·정정 요청을 신원으로 처리할 수 없는 대신, 앱 내에서
+자신의 모든 데이터를 즉시 확인(내가 내려놓은 비밀 · 대화방)하고 삭제할 수 있습니다.
+기타 문의: <strong><a href="mailto:son7523589@gmail.com">son7523589@gmail.com</a></strong></p>
+<h2>8. 방침의 변경</h2>
+<p>방침이 바뀌면 앱 내 공지와 함께 이 문서의 개정 이력을 갱신합니다.</p>
+<ul>
+<li>v1.0 (2026-07-23): 앱 전면 재구축 반영 — 별명, 첫 문장/본문 분리, 댓글방, 작성자와의 1:1 DM,
+비밀 자동 소멸(24시간/3일/7일)과 ⭐ 영구 보관, SNS 공유 인증, 알림. 강제 반응·채팅 5회 상한
+등 이전 구조는 삭제.</li>
+<li>v0.3 (2026-07-20): 하트(마음), 열쇠 구매 추가 반영.</li>
+<li>v0.2 (2026-07-19): 강제 반응 → 선택 댓글, 1회 왕복 → 각자 5회 채팅 + 결제 연장 반영.</li>
+<li>v0.1 (2026-07-16): 최초 작성</li>
+</ul>
+</body></html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soom Privacy Policy</title>
+<style>
+body{max-width:720px;margin:0 auto;padding:32px 20px 80px;font-family:'Apple SD Gothic Neo','Pretendard',-apple-system,sans-serif;line-height:1.75;color:#222;background:#fff}
+h1{font-size:26px;letter-spacing:-0.5px}h2{font-size:19px;margin-top:36px;letter-spacing:-0.3px}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #ddd;padding:8px 10px;text-align:left}
+th{background:#f7f5fb}code{background:#f4f2f8;padding:1px 5px;border-radius:4px;font-size:0.9em}
+li{margin:4px 0}strong{color:#000}
+@media(prefers-color-scheme:dark){body{background:#17121f;color:#ddd}strong{color:#fff}th{background:#241b33}td,th{border-color:#3a3348}code{background:#241b33}}
+</style></head><body><h1>Soom Privacy Policy</h1>
+<blockquote>
+<p><strong>Draft (v1.0, 2026-07-23)</strong> — requires legal review before launch. This document
+is written to match the actual implementation; if the implementation changes,
+this document must change with it.</p>
+</blockquote>
+<p>Soom (the &quot;app&quot;) is an anonymous secret-exchange service. Not knowing who you are
+is the core of the product, and this policy spells out what that promise means.</p>
+<h2>1. What we collect</h2>
+<p><strong>Account:</strong> you sign in with your Apple account or an email address (phone
+sign-in is not available yet). The only thing collected is <strong>your login
+identifier</strong> — and if you choose Apple&#39;s &quot;Hide My Email,&quot; we only ever store the
+relay address Apple issues. We neither request nor collect your name, date of
+birth, location, contacts, or photos. There is no advertising SDK and no
+behavioral tracking.</p>
+<p><strong>The promise that matters:</strong> your login exists only to keep your account
+(alias, keys, secrets) yours. <strong>The only thing other users ever see is the alias
+you chose</strong> — secrets, comments, and 1:1 messages travel between people fully
+anonymously.</p>
+<p>Data created while you use the app:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Contents</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Account identifier</td>
+<td>Email address (or Apple relay address) + internal ID (UUID)</td>
+<td>Sign-in, keeping your balance and history</td>
+</tr>
+<tr>
+<td>Alias</td>
+<td>The anonymous name you picked or rolled, and its orb colour</td>
+<td>The only thing shown to other users</td>
+</tr>
+<tr>
+<td>Secrets you write</td>
+<td>Category, first line, body, chosen lifespan, timestamp</td>
+<td>Providing the exchange</td>
+</tr>
+<tr>
+<td>Comments</td>
+<td>Free text you leave on a secret you opened (max 200 chars), timestamp</td>
+<td>The room of people who opened it</td>
+</tr>
+<tr>
+<td>1:1 messages</td>
+<td>Messages exchanged with a secret&#39;s author (max 400 chars), read timestamps</td>
+<td>Providing the anonymous 1:1 chat</td>
+</tr>
+<tr>
+<td>Hearts</td>
+<td>Which secrets you hearted</td>
+<td>Showing empathy, deciding permanent keeping</td>
+</tr>
+<tr>
+<td>Unlock records</td>
+<td>Which secrets you spent a key on</td>
+<td>Free re-reads, room access</td>
+</tr>
+<tr>
+<td>Key ledger</td>
+<td>Key earn/spend history (signup, purchase, unlock, daily, invite, share verification)</td>
+<td>Balance integrity, abuse prevention</td>
+</tr>
+<tr>
+<td>Purchase records</td>
+<td>Key purchases (product ID, App Store transaction ID)</td>
+<td>Verifying/restoring purchases, abuse prevention</td>
+</tr>
+<tr>
+<td>Invite records</td>
+<td>Your invite code, and who signed up with it</td>
+<td>Granting the invite reward</td>
+</tr>
+<tr>
+<td>Share verifications</td>
+<td>Which platform you verified on, the capture image you uploaded, and when you may verify again</td>
+<td>Granting the reward, abuse review, cooldown</td>
+</tr>
+<tr>
+<td>Reports &amp; blocks</td>
+<td>What you reported, who you blocked</td>
+<td>Safety operations</td>
+</tr>
+<tr>
+<td>Notifications</td>
+<td>Opened / reply / heart / expiry notices</td>
+<td>Showing your notifications</td>
+</tr>
+<tr>
+<td>Age confirmation time</td>
+<td>Timestamp of your 17+ self-declaration</td>
+<td>Age-rating compliance</td>
+</tr>
+</tbody></table>
+<p>Your session token is stored only in your device&#39;s secure storage
+(iOS Keychain / Android Keystore).</p>
+<h2>2. The AI safety filter and third parties</h2>
+<p><strong>Every secret, comment, and 1:1 message passes an automatic safety filter before
+it is posted or sent</strong> — regardless of any purchase. The filter runs in three
+stages, and in the process <strong>your text may be sent to the following processors:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Processor</th>
+<th>What is sent</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Supabase Inc.</td>
+<td>All stored data listed above</td>
+<td>Database and server hosting</td>
+</tr>
+<tr>
+<td>OpenAI (Moderation API)</td>
+<td>Only the text you attempted to post</td>
+<td>Scoring harm (sexual, hate, self-harm, threats)</td>
+</tr>
+<tr>
+<td>Anthropic (Claude)</td>
+<td>Only the ambiguous minority of texts</td>
+<td>Context-aware final classification</td>
+</tr>
+<tr>
+<td>Apple (App Store)</td>
+<td>Payment and receipt data for key purchases</td>
+<td>Processing payments, restoring purchases</td>
+</tr>
+</tbody></table>
+<p><strong>Only anonymous text is sent to the filter.</strong> Your account identifier, alias,
+session token, and device information are never sent with it. Both OpenAI and
+Anthropic state in their policies that data sent through their APIs is not used
+to train their models (see each company&#39;s data-use policy).</p>
+<p><strong>Payments:</strong> key purchases are handled <strong>exclusively through the Apple App
+Store</strong>. Card numbers and other payment details never reach us; we store only the
+product identifier and receipt needed to verify and restore a purchase.</p>
+<h2>3. Retention and deletion</h2>
+<ul>
+<li><strong>Secrets delete themselves.</strong> When the lifespan you chose (24 hours, 3 days, or
+7 days) runs out, the body, the first line, the photo, and <strong>every comment
+attached to that secret are destroyed immediately</strong>. A hollow record remains
+only to label the room, and is deleted after 7 days if no conversation
+continues. A secret that passes 100 hearts is kept indefinitely (⭐); even then,
+its author can delete it at any time.</li>
+<li><strong>1:1 messages outlive the secret.</strong> A conversation belongs to the two people in
+it, so it is kept separately from the secret&#39;s lifespan. Blocking the other
+person or deleting your account removes it, and account deletion below erases
+it all at any time.</li>
+<li><strong>Reported content is the one exception.</strong> When a report is filed, a copy of the
+reported secret, comment, or conversation is retained for <strong>up to one year</strong> —
+solely for handling the report, protecting users, and responding to legal
+requests — and is then destroyed. The copy is used for nothing else, even after
+the original has disappeared.</li>
+<li><strong>You can erase everything from inside the app</strong>: My space → Anonymity settings →
+&quot;Delete account and data.&quot; This immediately and permanently deletes your account
+along with your secrets, comments, 1:1 messages, hearts, unlock records, key
+ledger, purchase records, share verifications, and reports/blocks. It cannot be
+undone.</li>
+<li>Because the service is anonymous, we cannot locate a specific person&#39;s data by
+identity. Deletion is available only through the in-app function.</li>
+</ul>
+<h2>4. Age</h2>
+<p>Soom is for people <strong>17 and older</strong>. The promises on the start screen include a
+17+ self-declaration. If we learn that someone under 17 is using the app, we
+delete their data.</p>
+<h2>5. Self-harm and crisis</h2>
+<p>Text that indicates self-harm or crisis is not posted; instead we show crisis
+support resources <strong>for your region</strong>. This is not medical advice, and the app is
+not a substitute for emergency services.</p>
+<h2>6. Reporting and blocking</h2>
+<p>You can report a secret or a conversation from inside the app, and block anyone
+you are talking with. Blocking is mutual in effect: neither side sees the other&#39;s
+secrets or conversation again.</p>
+<h2>7. Your rights</h2>
+<p>Because the service is anonymous, we cannot process access or correction requests
+by identity. Instead, you can see all of your own data inside the app (your
+secrets, your conversations) and delete it at any time.
+Other questions: <strong><a href="mailto:son7523589@gmail.com">son7523589@gmail.com</a></strong></p>
+<h2>8. Changes to this policy</h2>
+<p>When this policy changes, we update the revision history below along with an
+in-app notice.</p>
+<ul>
+<li>v1.0 (2026-07-23): rewritten for the rebuilt app — aliases, first line vs. body,
+comment rooms, 1:1 DM with the author, self-deleting secrets (24h/3d/7d) and ⭐
+permanent keeping, share verification, notifications. The previous forced-reaction
+and 5-message-cap structures are gone.</li>
+<li>v0.3 (2026-07-20): hearts and key purchases.</li>
+<li>v0.2 (2026-07-19): forced reactions → optional comments; one round trip → 5 messages
+each with paid extension.</li>
+<li>v0.1 (2026-07-16): first draft</li>
+</ul>
+</body></html>
